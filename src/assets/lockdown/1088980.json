@@ -1,0 +1,213 @@
+{
+    "name": "Main light",
+    "settings": {
+        "physics": { "gravity": [0, -9.8, 0] },
+        "render": {
+            "fog_end": 1000,
+            "fog_start": 1,
+            "global_ambient": [0.2, 0.2, 0.2],
+            "fog_color": [0, 0, 0],
+            "fog": "none",
+            "fog_density": 0.01,
+            "gamma_correction": 1,
+            "tonemapping": 0,
+            "exposure": 1,
+            "skybox": null,
+            "skyboxIntensity": 1,
+            "skyboxMip": 0,
+            "lightmapSizeMultiplier": 16,
+            "lightmapMaxResolution": 2048,
+            "lightmapMode": 1,
+            "skyboxRotation": [0, 0, 0]
+        }
+    },
+    "entities": {
+        "028b90b7-7f60-4af3-9ac5-5c6e063f837e": {
+            "name": "Root",
+            "parent": null,
+            "resource_id": "028b90b7-7f60-4af3-9ac5-5c6e063f837e",
+            "tags": [],
+            "enabled": true,
+            "components": {},
+            "scale": [1, 1, 1],
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "children": [
+                "c2c58d64-7b98-4fb0-aa36-3066420891d2",
+                "2df9aace-30a2-43b3-8fcd-e96925417d0e",
+                "0f494e60-f087-4f38-b22d-eff6a4fc8da2",
+                "147d488b-2e3c-4f97-a32d-24a16bd6c917"
+            ]
+        },
+        "c2c58d64-7b98-4fb0-aa36-3066420891d2": {
+            "name": "Camera",
+            "parent": "028b90b7-7f60-4af3-9ac5-5c6e063f837e",
+            "resource_id": "c2c58d64-7b98-4fb0-aa36-3066420891d2",
+            "tags": [],
+            "enabled": true,
+            "components": {
+                "camera": {
+                    "fov": 45,
+                    "projection": 0,
+                    "clearColor": [0.118, 0.118, 0.118, 1],
+                    "clearColorBuffer": true,
+                    "clearDepthBuffer": true,
+                    "frustumCulling": true,
+                    "enabled": true,
+                    "orthoHeight": 4,
+                    "farClip": 1000,
+                    "nearClip": 0.1,
+                    "priority": 0,
+                    "rect": [0, 0, 1, 1],
+                    "layers": [0, 1, 2, 3, 4]
+                }
+            },
+            "scale": [1, 1, 1],
+            "position": [4, 3.5, 4],
+            "rotation": [-30, 45, 0],
+            "children": []
+        },
+        "2df9aace-30a2-43b3-8fcd-e96925417d0e": {
+            "name": "Light",
+            "parent": "028b90b7-7f60-4af3-9ac5-5c6e063f837e",
+            "resource_id": "2df9aace-30a2-43b3-8fcd-e96925417d0e",
+            "tags": [],
+            "enabled": true,
+            "components": {
+                "light": {
+                    "enabled": true,
+                    "bake": false,
+                    "bakeDir": true,
+                    "affectDynamic": true,
+                    "affectLightmapped": false,
+                    "isStatic": false,
+                    "color": [1, 1, 1],
+                    "intensity": 1,
+                    "type": "directional",
+                    "shadowDistance": 16,
+                    "range": 8,
+                    "innerConeAngle": 40,
+                    "outerConeAngle": 45,
+                    "falloffMode": 0,
+                    "castShadows": true,
+                    "shadowUpdateMode": 2,
+                    "shadowType": 0,
+                    "shadowResolution": 1024,
+                    "shadowBias": 0.4,
+                    "normalOffsetBias": 0.05,
+                    "vsmBlurMode": 1,
+                    "vsmBlurSize": 11,
+                    "vsmBias": 0.01,
+                    "cookieAsset": null,
+                    "cookieIntensity": 1,
+                    "cookieFalloff": true,
+                    "cookieChannel": "rgb",
+                    "cookieAngle": 0,
+                    "cookieScale": [1, 1],
+                    "cookieOffset": [0, 0],
+                    "layers": [0]
+                }
+            },
+            "scale": [1, 1, 1],
+            "position": [2, 2, -2],
+            "rotation": [45, 135, 0],
+            "children": []
+        },
+        "0f494e60-f087-4f38-b22d-eff6a4fc8da2": {
+            "name": "Box",
+            "parent": "028b90b7-7f60-4af3-9ac5-5c6e063f837e",
+            "resource_id": "0f494e60-f087-4f38-b22d-eff6a4fc8da2",
+            "tags": [],
+            "enabled": true,
+            "components": {
+                "model": {
+                    "enabled": true,
+                    "type": "box",
+                    "asset": null,
+                    "materialAsset": null,
+                    "castShadows": true,
+                    "receiveShadows": true,
+                    "lightmapped": false,
+                    "lightmapSizeMultiplier": 1,
+                    "castShadowsLightmap": true,
+                    "isStatic": false,
+                    "layers": [0],
+                    "batchGroupId": null
+                },
+                "rigidbody": {
+                    "enabled": true,
+                    "type": "dynamic",
+                    "mass": 1,
+                    "linearDamping": 0,
+                    "angularDamping": 0,
+                    "linearFactor": [1, 1, 1],
+                    "angularFactor": [1, 1, 1],
+                    "friction": 0.5,
+                    "restitution": 0.5
+                },
+                "collision": {
+                    "enabled": true,
+                    "type": "box",
+                    "halfExtents": [0.5, 0.5, 0.5],
+                    "radius": 0.5,
+                    "axis": 1,
+                    "height": 2,
+                    "asset": null
+                }
+            },
+            "scale": [1, 1, 1],
+            "position": [0, 1.8148813165922162, 0],
+            "rotation": [0, 0, 0],
+            "children": []
+        },
+        "147d488b-2e3c-4f97-a32d-24a16bd6c917": {
+            "name": "Plane",
+            "parent": "028b90b7-7f60-4af3-9ac5-5c6e063f837e",
+            "resource_id": "147d488b-2e3c-4f97-a32d-24a16bd6c917",
+            "tags": [],
+            "enabled": true,
+            "components": {
+                "model": {
+                    "enabled": true,
+                    "type": "plane",
+                    "asset": null,
+                    "materialAsset": null,
+                    "castShadows": true,
+                    "receiveShadows": true,
+                    "lightmapped": false,
+                    "lightmapSizeMultiplier": 1,
+                    "castShadowsLightmap": true,
+                    "isStatic": false,
+                    "layers": [0],
+                    "batchGroupId": null
+                },
+                "rigidbody": {
+                    "enabled": true,
+                    "type": "static",
+                    "mass": 1,
+                    "linearDamping": 0,
+                    "angularDamping": 0,
+                    "linearFactor": [1, 1, 1],
+                    "angularFactor": [1, 1, 1],
+                    "friction": 0.5,
+                    "restitution": 0.5
+                },
+                "collision": {
+                    "enabled": true,
+                    "type": "box",
+                    "halfExtents": [2.848, 0.232, 1.219],
+                    "radius": 0.5,
+                    "axis": 1,
+                    "height": 2,
+                    "asset": null
+                }
+            },
+            "scale": [8, 1, 8],
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "children": []
+        }
+    },
+    "created": "2021-02-10T20:33:12.446Z",
+    "id": 1088980
+}
