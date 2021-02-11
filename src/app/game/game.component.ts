@@ -58,7 +58,7 @@ export class GameComponent implements OnInit, AfterViewInit {
     initialize() {
         this.createCanvas();
 
-        window['ASSET_PREFIX'] = 'assets/lockdown/';
+        window['ASSET_PREFIX'] = 'assets/project/';
 
         try {
             console.log('try');
@@ -75,7 +75,7 @@ export class GameComponent implements OnInit, AfterViewInit {
                 scriptsOrder: window['SCRIPTS'] || [],
             });
 
-            if (window['PRELOAD_MODULES'].length > 0) {
+            if (window['PC_MODULES_LOADED'] !== true && window['PRELOAD_MODULES'].length > 0) {
                 this.processModules();
             } else {
                 this.configure();
@@ -189,6 +189,9 @@ export class GameComponent implements OnInit, AfterViewInit {
 
     configure() {
         console.log('configure start');
+        if (!window['PC_MODULES_LOADED']) {
+            window['PC_MODULES_LOADED'] = true;
+        }
         this.pcApplication.configure('assets/lockdown/' + window['CONFIG_FILENAME'], (err) => {
             console.log('configure cb');
             if (err) {

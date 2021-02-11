@@ -1,6 +1,6 @@
-# debug-playcanvas-angular
+# Playcanvas Angular
 
-Debug for Playcanvas integration in an Angular project
+Playcanvas project created with editor integrated in an Angular project
 
 ## install
 
